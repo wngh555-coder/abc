@@ -1,0 +1,16 @@
+employee_ref,dept,job_family,tenure_months,english_toeic,months_abroad_total,family_can_relocate,travel_readiness_1_5,disciplinary_issue,return_obligation_ok
+E-1001,DX,Engineering,42,820,14,Y,4,N,Y
+E-1002,DX,Engineering,18,690,0,N,3,N,Y
+E-1003,Sales,Sales,60,800,24,Y,5,N,Y
+E-1004,Sales,Sales,8,710,3,Y,2,N,Y
+E-1005,HQ,HR,36,760,6,Y,4,N,Y
+E-1006,HQ,Finance,54,790,0,Y,3,N,Y
+E-1007,Plant,Operations,72,650,18,N,4,N,Y
+E-1008,Plant,Operations,24,740,2,N,3,N,Y
+E-1009,R&D,Engineering,30,880,9,Y,5,N,Y
+E-1010,R&D,Engineering,12,620,0,Y,3,N,Y
+E-1011,DX,Engineering,48,770,12,Y,4,Y,N
+E-1012,Sales,Sales,40,795,8,Y,4,N,N
+E-1013,HQ,Legal,96,810,36,Y,5,N,Y
+E-1014,Plant,Operations,6,680,0,N,2,N,Y
+E-1015,R&D,Engineering,22,905,4,Y,5,N,Y

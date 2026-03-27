@@ -1,2 +1,6 @@
 [theme]
 primaryColor = "#22c55e"
+
+# Streamlit Community Cloud에서도 읽습니다. 배포 시 브라우저 설정은 클라우드 쪽에서 제한될 수 있습니다.
+[browser]
+gatherUsageStats = false
