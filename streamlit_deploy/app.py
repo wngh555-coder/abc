@@ -1,13 +1,18 @@
 """
-Streamlit Community Cloud에서 Main file을 `streamlit_deploy/app.py`로 둘 때 사용하는 진입점.
+Streamlit Community Cloud 진입점.
 
-권장: 저장소 루트의 `openai_chat_app.py`를 Main file로 지정하면 이 파일은 필요 없습니다.
+Main file: `streamlit_deploy/app.py` 로 지정하면 인생 시뮬레이터가 실행됩니다.
+로컬(저장소 루트에서): `streamlit run streamlit_deploy/app.py`
 """
 
 from __future__ import annotations
 
 import runpy
+import sys
 from pathlib import Path
 
-_ROOT = Path(__file__).resolve().parent.parent
-runpy.run_path(str(_ROOT / "openai_chat_app.py"), run_name="__main__")
+_HERE = Path(__file__).resolve().parent
+if str(_HERE) not in sys.path:
+    sys.path.insert(0, str(_HERE))
+
+runpy.run_path(str(_HERE / "life_sim_app.py"), run_name="__main__")
