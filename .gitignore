@@ -1,0 +1,21 @@
+# Secrets
+.env
+.env.*
+
+# Virtual environment (use requirements.txt)
+rag2/
+
+# Python
+__pycache__/
+*.py[cod]
+.Python
+*.egg-info/
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
