@@ -1,0 +1,83 @@
+{
+  "KOR": {
+    "name": "Korea Republic",
+    "attack": 72,
+    "defense": 70,
+    "midfield": 71,
+    "transition": 73,
+    "stamina": 72
+  },
+  "MEX": {
+    "name": "Mexico",
+    "attack": 73,
+    "defense": 71,
+    "midfield": 72,
+    "transition": 70,
+    "stamina": 71
+  },
+  "SUI": {
+    "name": "Switzerland",
+    "attack": 71,
+    "defense": 75,
+    "midfield": 73,
+    "transition": 69,
+    "stamina": 74
+  },
+  "SEN": {
+    "name": "Senegal",
+    "attack": 74,
+    "defense": 72,
+    "midfield": 70,
+    "transition": 76,
+    "stamina": 73
+  },
+  "JPN": {
+    "name": "Japan",
+    "attack": 74,
+    "defense": 73,
+    "midfield": 75,
+    "transition": 72,
+    "stamina": 74
+  },
+  "USA": {
+    "name": "United States",
+    "attack": 73,
+    "defense": 72,
+    "midfield": 71,
+    "transition": 73,
+    "stamina": 74
+  },
+  "GER": {
+    "name": "Germany",
+    "attack": 78,
+    "defense": 76,
+    "midfield": 79,
+    "transition": 74,
+    "stamina": 77
+  },
+  "BRA": {
+    "name": "Brazil",
+    "attack": 82,
+    "defense": 76,
+    "midfield": 80,
+    "transition": 78,
+    "stamina": 78
+  },
+  "FRA": {
+    "name": "France",
+    "attack": 81,
+    "defense": 78,
+    "midfield": 80,
+    "transition": 77,
+    "stamina": 78
+  },
+  "ARG": {
+    "name": "Argentina",
+    "attack": 80,
+    "defense": 77,
+    "midfield": 79,
+    "transition": 75,
+    "stamina": 77
+  }
+}
+

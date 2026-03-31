@@ -1,0 +1,194 @@
+{
+  "data_reference_date": "2025-03-01",
+  "data_source_note": "데모용 익명 샘플 CSV (실제 운영 시 HRIS/내부 DB로 교체)",
+  "tracks": [
+    {
+      "id": "expat",
+      "name": "장기 주재원",
+      "summary": "가족 동반·어학·징계 여부를 중심으로 장기 파견 적합성을 본다.",
+      "requirements": [
+        {
+          "id": "exp_en",
+          "kind": "required",
+          "field": "english_toeic",
+          "op": ">=",
+          "value": 780,
+          "label": "영어 TOEIC 780 이상 (회사 기준 예시)"
+        },
+        {
+          "id": "exp_fam",
+          "kind": "required",
+          "field": "family_can_relocate",
+          "op": "==",
+          "value_str": "Y",
+          "label": "가족 동반 가능(자가신고 Y)"
+        },
+        {
+          "id": "exp_disc",
+          "kind": "exclude",
+          "field": "disciplinary_issue",
+          "op": "==",
+          "value_str": "Y",
+          "label": "징계 이슈(Y) 시 후보군에서 제외"
+        }
+      ],
+      "preferred": [
+        {
+          "id": "exp_pref_abroad",
+          "field": "months_abroad_total",
+          "op": ">=",
+          "value": 6,
+          "weight": 15,
+          "label": "해외 체류·파견 누적 6개월 이상"
+        },
+        {
+          "id": "exp_pref_tenure",
+          "field": "tenure_months",
+          "op": ">=",
+          "value": 36,
+          "weight": 10,
+          "label": "근속 36개월 이상"
+        }
+      ]
+    },
+    {
+      "id": "study_abroad",
+      "name": "유학·연수 파견",
+      "summary": "복귀 의무·어학·징계 여부를 전제로 연수 적합성을 본다.",
+      "requirements": [
+        {
+          "id": "st_en",
+          "kind": "required",
+          "field": "english_toeic",
+          "op": ">=",
+          "value": 700,
+          "label": "영어 TOEIC 700 이상 (예시)"
+        },
+        {
+          "id": "st_ret",
+          "kind": "required",
+          "field": "return_obligation_ok",
+          "op": "==",
+          "value_str": "Y",
+          "label": "복귀·서약 조건 동의(Y)"
+        },
+        {
+          "id": "st_disc",
+          "kind": "exclude",
+          "field": "disciplinary_issue",
+          "op": "==",
+          "value_str": "Y",
+          "label": "징계 이슈(Y) 시 제외"
+        }
+      ],
+      "preferred": [
+        {
+          "id": "st_pref_tenure",
+          "field": "tenure_months",
+          "op": ">=",
+          "value": 24,
+          "weight": 12,
+          "label": "근속 24개월 이상"
+        },
+        {
+          "id": "st_pref_read",
+          "field": "travel_readiness_1_5",
+          "op": ">=",
+          "value": 4,
+          "weight": 8,
+          "label": "출장 적합 자가평가 4 이상"
+        }
+      ]
+    },
+    {
+      "id": "short_term",
+      "name": "단기 프로젝트·출장",
+      "summary": "단기 체류·출장 빈도를 감당할 수 있는지 어학·적응도를 본다.",
+      "requirements": [
+        {
+          "id": "sh_en",
+          "kind": "required",
+          "field": "english_toeic",
+          "op": ">=",
+          "value": 650,
+          "label": "영어 TOEIC 650 이상 (예시)"
+        },
+        {
+          "id": "sh_tr",
+          "kind": "required",
+          "field": "travel_readiness_1_5",
+          "op": ">=",
+          "value": 3,
+          "label": "출장 적합 자가평가 3 이상"
+        },
+        {
+          "id": "sh_disc",
+          "kind": "exclude",
+          "field": "disciplinary_issue",
+          "op": "==",
+          "value_str": "Y",
+          "label": "징계 이슈(Y) 시 제외"
+        }
+      ],
+      "preferred": [
+        {
+          "id": "sh_pref_abroad",
+          "field": "months_abroad_total",
+          "op": ">=",
+          "value": 1,
+          "weight": 10,
+          "label": "해외 경험 누적 1개월 이상"
+        }
+      ]
+    },
+    {
+      "id": "global_rotation",
+      "name": "글로벌 로테이션",
+      "summary": "순환·해외 적응 경험·어학을 종합해 본다.",
+      "requirements": [
+        {
+          "id": "gr_en",
+          "kind": "required",
+          "field": "english_toeic",
+          "op": ">=",
+          "value": 720,
+          "label": "영어 TOEIC 720 이상 (예시)"
+        },
+        {
+          "id": "gr_ab",
+          "kind": "required",
+          "field": "months_abroad_total",
+          "op": ">=",
+          "value": 3,
+          "label": "해외 누적 3개월 이상"
+        },
+        {
+          "id": "gr_disc",
+          "kind": "exclude",
+          "field": "disciplinary_issue",
+          "op": "==",
+          "value_str": "Y",
+          "label": "징계 이슈(Y) 시 제외"
+        }
+      ],
+      "preferred": [
+        {
+          "id": "gr_pref_tenure",
+          "field": "tenure_months",
+          "op": ">=",
+          "value": 48,
+          "weight": 14,
+          "label": "근속 48개월 이상"
+        },
+        {
+          "id": "gr_pref_read",
+          "field": "travel_readiness_1_5",
+          "op": ">=",
+          "value": 4,
+          "weight": 10,
+          "label": "출장 적합 자가평가 4 이상"
+        }
+      ]
+    }
+  ]
+}

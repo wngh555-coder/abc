@@ -1,0 +1,5 @@
+# 인생 시뮬레이터 (life_sim_app.py) 전용
+streamlit>=1.28.0
+pandas>=2.0.0
+plotly>=5.18.0
+numpy>=1.26.0

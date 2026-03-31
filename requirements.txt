@@ -1,8 +1,20 @@
-langchain 
-langchain_classic 
-langchain_openai  
-langchain_core 
-langchain_community 
-pypdf 
-faiss_cpu 
+# RAG / LangChain (0401)
+langchain
+langchain_classic
+langchain_openai
+langchain_core
+langchain_community
+pypdf
+faiss_cpu
 langchain_chroma
+
+# Dashboard / data (existing on remote)
+streamlit>=1.28.0
+pandas>=2.0.0
+plotly>=5.18.0
+seaborn>=0.13.0
+yfinance>=0.2.40
+wordcloud>=1.9.0
+Pillow>=10.0.0
+numpy>=1.26.0
+openai>=1.40.0
